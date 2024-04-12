@@ -1,0 +1,14 @@
+
+Useful Links:
+
+Sensor
+
+NPK Tutorial (https://how2electronics.com/measure-soil-nutrient-using-arduino-soil-npk-sensor/)
+Soil Moisture Tutorial (https://www.instructables.com/Arduino-Soil-Moisture-Sensor/)
+Humidity/Temperature Tutorial (https://lastminuteengineers.com/dht11-module-arduino-tutorial/)
+
+Bluetooth
+
+Bluetooth Module Hardware & Arduino Side (https://www.martyncurrey.com/hm-10-bluetooth-4ble-modules/)
+Bluetooth Unity Asset (https://assetstore.unity.com/packages/tools/network/bluetooth-le-for-ios-tvos-and-android-26661)
+Arduino/Unity Example Project Repo (https://github.com/tpitman/arduino-hm10-unity3d?tab=readme-ov-file)
