@@ -25,8 +25,8 @@ void setup() {
   }
 
     // initialize digital pin LED_BUILTIN as an output.
-  pinMode(LED_BUILTIN, OUTPUT);
-  digitalWrite(LED_BUILTIN, LOW);
+  pinMode(2, OUTPUT);
+  digitalWrite(2, LOW);
 }
 
 void loop() {
@@ -36,12 +36,12 @@ void loop() {
     inByte = Serial.read();
     if (inByte == 0x01) {
       if (ledStatus) {
-        digitalWrite(LED_BUILTIN, HIGH);
+        digitalWrite(2, HIGH);
         Serial.print("Setting LED On");
         ledStatus = false;
       }
       else {
-        digitalWrite(LED_BUILTIN, LOW);
+        digitalWrite(2, LOW);
         Serial.print("Setting LED Off");
         ledStatus = true;
       }
@@ -51,4 +51,3 @@ void loop() {
     }
   }
 }
-
