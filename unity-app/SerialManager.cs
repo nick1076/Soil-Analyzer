@@ -2,53 +2,43 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO.Ports;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SerialManager : MonoBehaviour
 {
     public string comPort = "COM1";
     public int baud = 9600;
-    public UnityEngine.UI.Text outputText;
-    bool coded;
-    SerialPort curStream;
-    public SerialManager(string com, int baud = 9600){
-        coded=true;
-        comPort=com;
-        Initialize();
-    }
+    public Text outputText;
 
-    public void Start(){
-        if (comPort != "COM1" && comPort != "" && !coded){
-            Initialize();
-        }
+    public void Start()
+    {
+        Initialize();
     }
 
     private void Initialize(){
         Debug.Log("Init Serial Manager | Port: " + comPort + " | Baud: " + baud.ToString());
-        curStream = new SerialPort(comPort, baud);
-        curStream.BaudRate = 9600;
-        curStream.Parity = Parity.None;
-        curStream.StopBits = StopBits.One;
-        curStream.DataBits = 8;
-        curStream.Handshake = Handshake.None;
-        curStream.Open();
     }
-
-    public void Update(){
-        if (curStream != null){
-            if (curStream.IsOpen){
-                string value = curStream.ReadLine();
-                Debug.Log("Received Data: " + value);
-                if (outputText != null){
-                    outputText.text = value;
-                }
+    float counter = 0;
+    public void Update()
+    {
+        counter += Time.deltaTime;
+        if (counter > 5)
+        {
+            SerialPort mySerialPort = new SerialPort(comPort);
+            mySerialPort.BaudRate = 9600;
+            mySerialPort.Parity = Parity.None;
+            mySerialPort.StopBits = StopBits.One;
+            mySerialPort.DataBits = 8;
+            mySerialPort.Handshake = Handshake.None;
+            mySerialPort.Open();
+            string value = mySerialPort.ReadLine();
+            mySerialPort.Close();
+            Debug.Log("Received Data: " + value);
+            if (outputText != null)
+            {
+                outputText.text = value;
             }
-        }
-    }
-
-    public void CloseStream(){
-        if (curStream != null){
-            curStream.Close();
-            curStream = null;
+            counter = 0;
         }
     }
 }
