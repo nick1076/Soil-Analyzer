@@ -1,3 +1,10 @@
+#include <dht.h>
+
+dht DHT;
+
+#define tempHumSensor 9
+#define soilMoistureSensor A0
+
 #include <SoftwareSerial.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>
@@ -13,7 +20,7 @@ const byte pota[] = {0x01,0x03, 0x00, 0x20, 0x00, 0x01, 0x85, 0xc0};
  
 byte values[11];
 SoftwareSerial mod(2,3);
- 
+
 void setup() {
   Serial.begin(9600);
   mod.begin(9600);
@@ -22,8 +29,9 @@ void setup() {
   delay(500);
   delay(3000);
 }
- 
+
 void loop() {
+  Serial.println();
   byte val1,val2,val3;
   val1 = nitrogen();
   delay(250);
@@ -31,7 +39,20 @@ void loop() {
   delay(250);
   val3 = potassium();
   delay(250);
+  delay(500);
+  int readData = DHT.read11(tempHumSensor);
+  float t = DHT.temperature;
+  float h = DHT.humidity;
+  Serial.print("Temperature: ");
+  Serial.print((t*9.0)/5.0+32.0);
+  Serial.print("°F | ");
+  Serial.print("Humidity: ");
+  Serial.print(h);
+  Serial.print("% | ");
   
+  int soilMoisture = analogRead(soilMoistureSensor);
+  Serial.print("Soil Moisture: ");
+  Serial.println(soilMoisture);
   
   Serial.print("Nitrogen: ");
   Serial.print(val1);
@@ -43,33 +64,10 @@ void loop() {
   Serial.print(val3);
   Serial.println(" mg/kg");
   delay(2000);
- 
-  display.clearDisplay();
   
- 
-  display.setTextSize(2);
-  display.setCursor(0, 5);
-  display.print("N: ");
-  display.print(val1);
-  display.setTextSize(1);
-  display.print(" mg/kg");
- 
-  display.setTextSize(2);
-  display.setCursor(0, 25);
-  display.print("P: ");
-  display.print(val2);
-  display.setTextSize(1);
-  display.print(" mg/kg");
- 
-  display.setTextSize(2);
-  display.setCursor(0, 45);
-  display.print("K: ");
-  display.print(val3);
-  display.setTextSize(1);
-  display.print(" mg/kg");
- 
-  display.display();
+  Serial.println();
 }
+
  
 byte nitrogen(){
   digitalWrite(DE,HIGH);
@@ -81,9 +79,9 @@ byte nitrogen(){
     for(byte i=0;i<7;i++){
     //Serial.print(mod.read(),HEX);
     values[i] = mod.read();
-    Serial.print(values[i],HEX);
+    //Serial.print(values[i],HEX);
     }
-    Serial.println();
+    //Serial.println();
   }
   return values[4];
 }
@@ -98,9 +96,9 @@ byte phosphorous(){
     for(byte i=0;i<7;i++){
     //Serial.print(mod.read(),HEX);
     values[i] = mod.read();
-    Serial.print(values[i],HEX);
+    //Serial.print(values[i],HEX);
     }
-    Serial.println();
+    //Serial.println();
   }
   return values[4];
 }
@@ -115,9 +113,9 @@ byte potassium(){
     for(byte i=0;i<7;i++){
     //Serial.print(mod.read(),HEX);
     values[i] = mod.read();
-    Serial.print(values[i],HEX);
+    //Serial.print(values[i],HEX);
     }
-    Serial.println();
+    //Serial.println();
   }
   return values[4];
 }
