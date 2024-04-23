@@ -1,0 +1,992 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "3e8c06dc-1b07-40a9-a06b-ce9bde88b3d4")
+	(paper "A4")
+	(lib_symbols
+		(symbol "fab:Conn_PinHeader_1x06_P2.54mm_Horizontal_SMD"
+			(pin_names hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_PinHeader_1x06_P2.54mm_Horizontal_SMD"
+				(at 0 -10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "fab:PinHeader_1x06_P2.54mm_Horizontal_SMD"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://gct.co/files/specs/2.54mm-socket-spec.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Male connector, single row"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "single row male connector BG300-06-A-L-A"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "*PinHeader*1x06*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_PinHeader_1x06_P2.54mm_Horizontal_SMD_1_1"
+				(rectangle
+					(start -1.27 -6.985)
+					(end 1.27 -8.255)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -1.27 -4.445)
+					(end 1.27 -5.715)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -1.27 -1.905)
+					(end 1.27 -3.175)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -1.27 0.635)
+					(end 1.27 -0.635)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -1.27 3.175)
+					(end 1.27 1.905)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -1.27 5.715)
+					(end 1.27 4.445)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(pin passive line
+					(at 5.08 5.08 180)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -5.08 180)
+					(length 3.81)
+					(name "Pin_5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -7.62 180)
+					(length 3.81)
+					(name "Pin_6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "fab:Microcontroller_ATtiny1614-SSFR"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -12.7 17.78 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "Microcontroller_ATtiny1614-SSFR"
+				(at 7.62 17.78 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify top)
+				)
+			)
+			(property "Footprint" "fab:SOIC-14_3.9x8.7mm_P1.27mm"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny1614-16-17-DataSheet-DS40002204A.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "AVR tinyAVR™ 1 Microcontroller IC 8-Bit 16MHz 16KB (16K x 8) FLASH 14-SOIC"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "avr microcontroller attiny 1614 soic 8bit 150-ATTINY1624-SSFR"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SOIC*3.9x8.7mm*P1.27mm*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Microcontroller_ATtiny1614-SSFR_0_1"
+				(rectangle
+					(start -12.7 -15.24)
+					(end 12.7 15.24)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "Microcontroller_ATtiny1614-SSFR_1_1"
+				(pin power_in line
+					(at 0 17.78 270)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 7.62 180)
+					(length 2.54)
+					(name "~{RESET}/UPDI/PA0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 5.08 180)
+					(length 2.54)
+					(name "PA1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 2.54 180)
+					(length 2.54)
+					(name "PA2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 0 180)
+					(length 2.54)
+					(name "PA3/SCK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -17.78 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 -2.54 180)
+					(length 2.54)
+					(name "PA4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 -5.08 180)
+					(length 2.54)
+					(name "PA5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 -7.62 180)
+					(length 2.54)
+					(name "PA6/DAC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 -10.16 180)
+					(length 2.54)
+					(name "PA7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -15.24 0 0)
+					(length 2.54)
+					(name "PB3/RXD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -15.24 2.54 0)
+					(length 2.54)
+					(name "PB2/TXD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -15.24 5.08 0)
+					(length 2.54)
+					(name "PB1/SDA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -15.24 7.62 0)
+					(length 2.54)
+					(name "PB0/SCL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 151.13 88.9) (xy 158.75 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00189687-0a68-4d3c-90d2-a6207e1783c5")
+	)
+	(wire
+		(pts
+			(xy 146.05 90.17) (xy 158.75 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0e7c4c2b-5677-4045-9fc6-8f5f5f5375b4")
+	)
+	(wire
+		(pts
+			(xy 146.05 87.63) (xy 154.94 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1dfa0944-2b31-401e-8fa4-c15e749a4475")
+	)
+	(wire
+		(pts
+			(xy 153.67 85.09) (xy 153.67 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3bd34359-8c4e-4dfd-a31d-0e5fae35abd3")
+	)
+	(wire
+		(pts
+			(xy 113.03 82.55) (xy 113.03 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "471bf5bf-6863-48d2-b233-677da7378324")
+	)
+	(wire
+		(pts
+			(xy 158.75 90.17) (xy 158.75 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63650b9b-c5fd-4549-8403-d7f99f10026f")
+	)
+	(wire
+		(pts
+			(xy 110.49 102.87) (xy 157.48 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70f10bc0-2712-42e6-99f8-2a037a983cbe")
+	)
+	(wire
+		(pts
+			(xy 110.49 80.01) (xy 110.49 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7114793d-5c20-425c-8bc3-78d9af2da90b")
+	)
+	(wire
+		(pts
+			(xy 115.57 82.55) (xy 113.03 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7463c038-1943-4af6-a6fc-33afb48c57c2")
+	)
+	(wire
+		(pts
+			(xy 156.21 86.36) (xy 158.75 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7b5bdaf8-c05f-4e5f-9dd3-a2e4c7c60379")
+	)
+	(wire
+		(pts
+			(xy 156.21 101.6) (xy 156.21 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8968f56b-bcc0-44ed-bc65-08d5ef844e5d")
+	)
+	(wire
+		(pts
+			(xy 113.03 101.6) (xy 156.21 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9967f44e-e4ea-4114-b237-91d1f2aa713b")
+	)
+	(wire
+		(pts
+			(xy 157.48 83.82) (xy 158.75 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a182fbc2-bcb9-468f-aa33-45d4e29353cc")
+	)
+	(wire
+		(pts
+			(xy 153.67 96.52) (xy 158.75 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a4736a35-8a15-4320-8135-7d829bf98203")
+	)
+	(wire
+		(pts
+			(xy 115.57 80.01) (xy 110.49 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a88a27b7-8127-4e09-9aa0-cc86ca0412ec")
+	)
+	(wire
+		(pts
+			(xy 154.94 87.63) (xy 154.94 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b579ae40-4d39-48e0-ae05-67518e34149a")
+	)
+	(wire
+		(pts
+			(xy 146.05 85.09) (xy 153.67 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c939d1e3-7803-41d7-a567-a2a6c7996e62")
+	)
+	(wire
+		(pts
+			(xy 154.94 93.98) (xy 158.75 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d4151a6d-de8f-4bd8-9da8-701aea1da600")
+	)
+	(wire
+		(pts
+			(xy 157.48 102.87) (xy 157.48 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d51a4401-43f3-4639-9650-d04511e91b99")
+	)
+	(wire
+		(pts
+			(xy 146.05 92.71) (xy 151.13 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ecba4f86-6ab1-4000-a80f-14ab0139a53d")
+	)
+	(wire
+		(pts
+			(xy 151.13 92.71) (xy 151.13 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f6081697-0602-44da-84c6-1c1b7b22e390")
+	)
+	(symbol
+		(lib_id "fab:Microcontroller_ATtiny1614-SSFR")
+		(at 130.81 82.55 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ce2e2d35-1357-42cf-b7f6-34db8079b0fe")
+		(property "Reference" "U1"
+			(at 133.0041 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Microcontroller_ATtiny1614-SSFR"
+			(at 133.0041 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "fab:SOIC-14_3.9x8.7mm_P1.27mm"
+			(at 130.81 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny1614-16-17-DataSheet-DS40002204A.pdf"
+			(at 130.81 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "AVR tinyAVR™ 1 Microcontroller IC 8-Bit 16MHz 16KB (16K x 8) FLASH 14-SOIC"
+			(at 130.81 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "6"
+			(uuid "62634601-b1df-40e1-87b9-e5dd981fcc43")
+		)
+		(pin "7"
+			(uuid "3b36d659-86cf-4e0a-96af-b80b36165c5e")
+		)
+		(pin "11"
+			(uuid "b57ba5a6-f6fd-44a2-996b-b67bf74dd126")
+		)
+		(pin "12"
+			(uuid "5858185b-6573-4379-a56d-b659b6be0b56")
+		)
+		(pin "5"
+			(uuid "160c80e2-cc04-459b-933a-63f56400e408")
+		)
+		(pin "4"
+			(uuid "059673a5-2d10-44cc-8944-8a9a88a8f0ee")
+		)
+		(pin "2"
+			(uuid "cfd975f0-950f-4806-99dc-a4a0471b1680")
+		)
+		(pin "13"
+			(uuid "8425e3b5-5d79-48cc-a1ef-b4e6a6e3c5b1")
+		)
+		(pin "3"
+			(uuid "9389b948-7795-4e3f-942d-b1f40d67409c")
+		)
+		(pin "10"
+			(uuid "7bbc3c70-9ad7-4dee-a00a-ff2512fa2eca")
+		)
+		(pin "14"
+			(uuid "ed5d9124-45a5-4075-b129-efbe6372bf91")
+		)
+		(pin "8"
+			(uuid "ebfe0e61-9ef3-4522-b5a6-0baea66b8c64")
+		)
+		(pin "9"
+			(uuid "47ab09bf-cc52-4eb7-9df6-5dea243d82b7")
+		)
+		(pin "1"
+			(uuid "4dac59ee-4b81-4bf8-b26c-77930930b174")
+		)
+		(instances
+			(project "mainboard"
+				(path "/3e8c06dc-1b07-40a9-a06b-ce9bde88b3d4"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "fab:Conn_PinHeader_1x06_P2.54mm_Horizontal_SMD")
+		(at 163.83 91.44 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e8cfdeb1-c651-4584-98f8-6499e81c84dc")
+		(property "Reference" "J2"
+			(at 166.37 88.8999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Conn_PinHeader_1x06_P2.54mm_Horizontal_SMD"
+			(at 166.37 91.4399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "fab:PinHeader_1x06_P2.54mm_Horizontal_SMD"
+			(at 163.83 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://gct.co/files/specs/2.54mm-socket-spec.pdf"
+			(at 163.83 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Male connector, single row"
+			(at 163.83 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ae72cadc-0fe3-4114-8431-f923fbac95dc")
+		)
+		(pin "6"
+			(uuid "ec6dd9e1-7cd7-4a70-9b1c-df244c8ce815")
+		)
+		(pin "5"
+			(uuid "73bf11be-c9fd-4f9c-ba1a-9acc49ef4aef")
+		)
+		(pin "1"
+			(uuid "957faeab-5d8f-4856-9e0f-3fe507c23dcc")
+		)
+		(pin "4"
+			(uuid "c8d5f7a5-8911-46fa-93a3-34c9002d7f8d")
+		)
+		(pin "3"
+			(uuid "c897c9fa-d574-4ca1-9c4f-82098ee5d269")
+		)
+		(instances
+			(project "mainboard"
+				(path "/3e8c06dc-1b07-40a9-a06b-ce9bde88b3d4"
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
