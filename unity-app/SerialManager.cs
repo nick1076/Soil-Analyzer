@@ -9,9 +9,14 @@ public class SerialManager : MonoBehaviour
     public string comPort = "COM1";
     public int baud = 9600;
     public Text outputText;
+    public GraphicsManager graphicMan;
 
     public void Start()
     {
+        if (graphicMan != null)
+        {
+            graphicMan.loading.gameObject.SetActive(false);
+        }
         Initialize();
     }
 
@@ -38,7 +43,23 @@ public class SerialManager : MonoBehaviour
             {
                 outputText.text = value;
             }
+            if (graphicMan != null)
+            {
+                graphicMan.loading.gameObject.SetActive(false);
+                graphicMan.UpdateGraphics(value);
+            }
             counter = 0;
+        }
+        else
+        {
+            if (graphicMan != null)
+            {
+                graphicMan.counter.text = ((int)(5 - counter)).ToString();
+                if ((int)(5-counter) < 1)
+                {
+                    graphicMan.loading.gameObject.SetActive(true);
+                }
+            }
         }
     }
 }

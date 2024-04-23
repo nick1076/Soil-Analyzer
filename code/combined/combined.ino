@@ -1,5 +1,7 @@
 #include <dht.h>
 
+bool serialMonitor = false;
+
 dht DHT;
 
 #define tempHumSensor 9
@@ -7,8 +9,6 @@ dht DHT;
 
 #include <SoftwareSerial.h>
 #include <Wire.h>
-#include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>
 
 #define RE 8
 #define DE 7
@@ -31,7 +31,6 @@ void setup() {
 }
 
 void loop() {
-  Serial.println();
   byte val1,val2,val3;
   val1 = nitrogen();
   delay(250);
@@ -43,29 +42,48 @@ void loop() {
   int readData = DHT.read11(tempHumSensor);
   float t = DHT.temperature;
   float h = DHT.humidity;
-  Serial.print("Temperature: ");
-  Serial.print((t*9.0)/5.0+32.0);
-  Serial.print("°F | ");
-  Serial.print("Humidity: ");
-  Serial.print(h);
-  Serial.print("% | ");
-  
   int soilMoisture = analogRead(soilMoistureSensor);
-  Serial.print("Soil Moisture: ");
-  Serial.println(soilMoisture);
-  
-  Serial.print("Nitrogen: ");
-  Serial.print(val1);
-  Serial.println(" mg/kg");
-  Serial.print("Phosphorous: ");
-  Serial.print(val2);
-  Serial.println(" mg/kg");
-  Serial.print("Potassium: ");
-  Serial.print(val3);
-  Serial.println(" mg/kg");
-  delay(2000);
-  
-  Serial.println();
+
+  if (serialMonitor){
+    Serial.print("Temperature: ");
+    Serial.print((t*9.0)/5.0+32.0);
+    Serial.print("°F | ");
+    Serial.print("Humidity: ");
+    Serial.print(h);
+    Serial.print("% | ");
+    
+    Serial.print("Soil Moisture: ");
+    Serial.println(soilMoisture);
+    
+    Serial.print("Nitrogen: ");
+    Serial.print(val1);
+    Serial.println(" mg/kg");
+    Serial.print("Phosphorous: ");
+    Serial.print(val2);
+    Serial.println(" mg/kg");
+    Serial.print("Potassium: ");
+    Serial.print(val3);
+    Serial.println(" mg/kg");
+    delay(2000);
+    
+    Serial.println();
+  }
+  else{
+    Serial.print("&");
+    Serial.print((t*9.0)/5.0+32.0);
+    Serial.print("&");
+    Serial.print(h);
+    Serial.print("&");
+    Serial.print(soilMoisture);
+    Serial.print("&");
+    Serial.print(val1);
+    Serial.print("&");
+    Serial.print(val2);
+    Serial.print("&");
+    Serial.print(val3);
+    Serial.println("&");
+    delay(2000);
+  }
 }
 
  
