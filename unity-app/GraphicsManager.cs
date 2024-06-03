@@ -12,7 +12,7 @@ public class GraphicsManager : MonoBehaviour
     public TextMeshProUGUI n;
     public TextMeshProUGUI p;
     public TextMeshProUGUI k;
-    public TextMeshProUGUI counter;
+    public Image loadingBar;
     public TextMeshProUGUI loading;
 
     public void UpdateGraphics(string data)
@@ -23,22 +23,32 @@ public class GraphicsManager : MonoBehaviour
             switch (i)
             {
                 case 1:
-                    temp.text = "Temperature: " + info[i] + "°";
+                    temp.text =  info[i] + "°";
                     break;
                 case 2:
-                    hum.text = "Humidity: " + info[i] + "%";
+                    hum.text = info[i] + "%";
                     break;
                 case 3:
-                    mois.text = "Moisture: " + info[i];
+                    float moi = Mathf.Round((1 - ((float)System.Int64.Parse(info[i]) / 655)) * 100);
+                    if (moi < 0)
+                    {
+                        moi = 0;
+                    }
+                    else if (moi > 100)
+                    {
+                        moi = 100;
+                    }
+
+                    mois.text = moi.ToString() + "%";
                     break;
                 case 4:
-                    n.text = "Nitrogen: " + info[i] + "mg/kg";
+                    n.text = info[i] + "mg/kg";
                     break;
                 case 5:
-                    p.text = "Potassium: " + info[i] + "mg/kg";
+                    p.text = info[i] + "mg/kg";
                     break;
                 case 6:
-                    k.text = "Phosphorus: " + info[i] + "mg/kg";
+                    k.text = info[i] + "mg/kg";
                     break;
             }
         }
